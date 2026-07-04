@@ -1,1 +1,1 @@
-echo "hostname is $hostname "
+echo "hostname is $(hostname) "
