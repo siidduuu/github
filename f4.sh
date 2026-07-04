@@ -1,1 +1,1 @@
-echo "present user $whoami"
+echo "present user $(whoami)"
