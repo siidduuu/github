@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "the present date is $date"
+echo "the present date is $(date)"
