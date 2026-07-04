@@ -1,1 +1,1 @@
-echo "present working directory is $pwd "
+echo "present working directory is $(pwd) "
