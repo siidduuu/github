@@ -1,1 +1,1 @@
-echo "display the files in directory is $ls "
+echo "display the files in directory is $(ls) "
