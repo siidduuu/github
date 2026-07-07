@@ -8,8 +8,6 @@ pipeline {
             steps {
                 echo "Running on node: ${env.NODE_NAME}"
                 echo "Checking out source code..."
-                // Optional: Add actual checkout step here if needed
-                // checkout scm
             }
         }
 
