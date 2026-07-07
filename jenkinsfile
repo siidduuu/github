@@ -4,11 +4,12 @@ pipeline {
     }
 
     stages {
-
         stage('Stage 1 - Checkout') {
             steps {
                 echo "Running on node: ${env.NODE_NAME}"
                 echo "Checking out source code..."
+                // Optional: Add actual checkout step here if needed
+                // checkout scm
             }
         }
 
@@ -17,7 +18,7 @@ pipeline {
                 sh '''
                     echo "Building the application..."
                     pwd
-                    ls -l....
+                    ls -la
                 '''
             }
         }
@@ -29,4 +30,6 @@ pipeline {
                     echo "All tests passed."
                 '''
             }
-
+        }
+    }
+}
