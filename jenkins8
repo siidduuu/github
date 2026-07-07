@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+       label 'linux1'
+     }
+
+    stages {
+        stage('current logged in user') {
+            steps {
+                sh 'whoami'
+            }
+        }
+    }
+}
