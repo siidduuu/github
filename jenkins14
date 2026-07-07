@@ -3,14 +3,31 @@ pipeline {
         label 'linux1'
     }
 
-    stages {
-        stage('Run Scripts') {
+     stages {
+        stage('Execute Jenkins3') {
             steps {
-                sh 'chmod +x jenkins3 jenkins4 jenkins5 jenkins6'
-                sh 'jenkins3'
-                sh 'jenkins4'
-                sh 'jenkins5'
-                sh 'jenkins6'
+                script {
+                    def script3 = load 'jenkins3'
+                    script3()
+                }
+            }
+        }
+
+        stage('Execute Jenkins4') {
+            steps {
+                script {
+                    def script4 = load 'jenkins4'
+                    script4()
+                }
+            }
+        }
+
+        stage('Execute Jenkins5') {
+            steps {
+                script {
+                    def script5 = load 'jenkins5'
+                    script5()
+                }
             }
         }
     }
