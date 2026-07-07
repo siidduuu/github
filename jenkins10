@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('One') {
+            steps {
+                echo 'Hello Devops'
+            }
+        }
+
+        stage('Two') {
+            steps {
+                echo 'Hello python'
+            }
+        }
+
+        stage('Three') {
+            steps {
+                echo 'Hello Jenkins'
+            }
+        }
+    }
+}
