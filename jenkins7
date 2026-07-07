@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+       label 'linux1'
+     }
+
+    parameters {
+        string(name: 'NAME')
+    }
+
+    stages {
+        stage('Print') {
+            steps {
+                echo params.NAME
+            }
+        }
+    }
+}
