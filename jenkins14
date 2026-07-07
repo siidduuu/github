@@ -3,32 +3,32 @@ pipeline {
         label 'linux1'
     }
 
-     stages {
-        stage('Execute Jenkins3') {
+  pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
             steps {
-                script {
-                    def script3 = load 'jenkins3'
-                    script3()
-                }
+                echo "Source code checked out from GitHub/GitLab."
             }
         }
 
-        stage('Execute Jenkins4') {
+        stage('Build') {
             steps {
-                script {
-                    def script4 = load 'jenkins4'
-                    script4()
-                }
+                sh 'echo "Building the project..."'
             }
         }
 
-        stage('Execute Jenkins5') {
+        stage('Test') {
             steps {
-                script {
-                    def script5 = load 'jenkins5'
-                    script5()
-                }
+                sh 'echo "Running tests..."'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deployment completed."'
             }
         }
     }
-}
+} 
