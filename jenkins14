@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        label 'linux1'
+    }
+
+    stages {
+        stage('Run Scripts') {
+            steps {
+                sh 'chmod +x jenkins3.sh jenkins4.sh jenkins5.sh jenkins6.sh'
+                sh 'jenkins3.sh'
+                sh 'jenkins4.sh'
+                sh 'jenkins5.sh'
+                sh 'jenkins6.sh'
+            }
+        }
+    }
+}
