@@ -1,7 +1,7 @@
 pipeline {
     agent {
-       label 'linux1'
-     }
+        label 'linux1'
+    }
 
     stages {
         stage('current logged in user') {
@@ -9,7 +9,9 @@ pipeline {
                 sh 'whoami'
             }
         }
-post {
+    }
+
+    post {
         success {
             echo 'Pipeline completed successfully!'
         }
