@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        label 'linux1'
+    }
+
+    stages {
+        stage('Example Stage') {
+            steps {
+                echo "Running on node: ${env.NODE_NAME}"
+            }
+        }
+    }
+}
