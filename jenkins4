@@ -4,7 +4,7 @@ pipeline {
      }
 
     stages {
-        stage('Current day details') {
+        stage('Current Working Directory') {
             steps {
                 sh 'pwd'
             }
