@@ -7,7 +7,6 @@ pipeline {
         stage('Current day details') {
             steps {
                 sh 'date'
-                sh 'echo "current date is ${date}"'
             }
         }
     }
