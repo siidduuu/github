@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+       label 'linux1'
+     }
+
+    stages {
+        stage('list of files') {
+            steps {
+                sh 'ls -l'
+            }
+        }
+    }
+}
