@@ -1,0 +1,12 @@
+  pipeline {
+    agent {
+       label 'linux1'
+     }
+stages {
+        stage('Workspace') {
+            steps {
+                echo "${WORKSPACE}"
+            }
+        }
+    }
+}
